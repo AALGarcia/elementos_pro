@@ -1,14 +1,5 @@
-# Ignorar todo por defecto
-*
-
-# ✅ Excepciones: incluir src y index.html
-!src/
-!index.html
-
-# 🔁 Reglas específicas que siguen siendo útiles
 # Dependencies
 node_modules/
-package-lock.json
 
 # Environment variables
 .env
@@ -41,3 +32,27 @@ build/
 # Temporary files
 tmp/
 temp/
+
+# Archivos de documentación y testing (no necesarios para correr la app)
+CONFIGURACION.md
+CORRECCION-MODALES.md
+CREAR-ASIGNACIONES.md
+DIAGNOSTICO-MODALES.md
+EXPLICACION-RUTAS.md
+INICIO-RAPIDO.md
+INSTRUCCIONES-FINALES.md
+INTEGRACION-COMPLETADA.md
+NUEVAS-FUNCIONALIDADES.md
+SOLUCION-FINAL.md
+TESTING-CHECKLIST.md
+
+# Scripts de testing y debugging
+check-elemento.js
+check-rol-persona.js
+check-schema.js
+debug-elementos.js
+insertar-datos-prueba.js
+test-api.js
+test-integration.js
+test-modal.html
+ver-esquema-completo.js
