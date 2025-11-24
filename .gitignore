@@ -1,6 +1,11 @@
 # Ignorar todo por defecto
 *
 
+# ✅ Excepciones: incluir src y index.html
+!src/
+!index.html
+
+# 🔁 Reglas específicas que siguen siendo útiles
 # Dependencies
 node_modules/
 package-lock.json
@@ -27,6 +32,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.kiro/
 
 # Build outputs
 dist/
