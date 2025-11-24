@@ -1,0 +1,144 @@
+/* Estilos personalizados para la gestión de asignaciones */
+
+/* Mejorar la legibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+  /* Hacer los botones más grandes y táctiles en móviles */
+  .btn-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Ajustar el tamaño de los iconos en móviles */
+  .btn-sm i {
+    font-size: 1.1rem;
+  }
+  
+  /* Reducir el padding de las celdas en móviles */
+  #tablaAsignaciones td,
+  #tablaAsignaciones th {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Hacer el título más pequeño en móviles */
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  /* Ajustar el ancho de los modales en móviles */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+}
+
+/* Mejorar la apariencia de los botones de acción */
+.btn-group .btn {
+  min-width: 40px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Asegurar que los botones sean táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mejorar la visibilidad de la tabla en pantallas pequeñas */
+.table-responsive {
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Estilo para el contenedor de mensajes */
+#mensajesContainer {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  min-width: 300px;
+  max-width: 90%;
+  margin-top: 1rem;
+}
+
+/* Mejorar la apariencia de las alertas */
+.alert {
+  border-left: 4px solid;
+}
+
+.alert-success {
+  border-left-color: #198754;
+}
+
+.alert-danger {
+  border-left-color: #dc3545;
+}
+
+/* Mejorar el espaciado de los iconos en alertas */
+.alert i {
+  vertical-align: middle;
+}
+
+/* Asegurar que la tabla sea completamente responsiva */
+@media (max-width: 576px) {
+  .table-responsive {
+    font-size: 0.75rem;
+  }
+  
+  /* Ocultar columnas menos importantes en pantallas muy pequeñas */
+  #tablaAsignaciones th:nth-child(4),
+  #tablaAsignaciones td:nth-child(4) {
+    display: none;
+  }
+}
+
+/* Mejorar la apariencia del header de la tabla */
+.table-dark th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effect para las filas de la tabla */
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+  cursor: pointer;
+}
+
+/* Mejorar la apariencia de los modales */
+.modal-content {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 2px solid #dee2e6;
+}
+
+/* Asegurar que los formularios sean accesibles */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Mejorar la apariencia de los campos de solo lectura */
+.form-control[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}

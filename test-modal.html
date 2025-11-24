@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Modal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Test de Modal</h1>
+    <button class="btn btn-primary" id="testBtn">Abrir Modal de Prueba</button>
+    
+    <hr>
+    
+    <h2>Test Personas</h2>
+    <button class="btn btn-success" onclick="testPersonas()">Test Función Personas</button>
+    
+    <hr>
+    
+    <h2>Test Elementos</h2>
+    <button class="btn btn-info" onclick="testElementos()">Test Función Elementos</button>
+  </div>
+
+  <!-- Modal de Prueba -->
+  <div class="modal fade" id="testModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal de Prueba</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Este es un modal de prueba básico.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Test básico de modal
+    document.getElementById('testBtn').addEventListener('click', function() {
+      const modal = new bootstrap.Modal(document.getElementById('testModal'));
+      modal.show();
+      console.log('Modal básico abierto');
+    });
+    
+    // Test función personas
+    function testPersonas() {
+      console.log('Probando función de personas...');
+      console.log('Verificando si existe abrirModalCrear:', typeof abrirModalCrear);
+      
+      if (typeof abrirModalCrear === 'function') {
+        console.log('Función abrirModalCrear existe, ejecutando...');
+        abrirModalCrear();
+      } else {
+        console.error('Función abrirModalCrear NO existe');
+        alert('Error: La función abrirModalCrear no está definida. Verifica que personas.js se haya cargado.');
+      }
+    }
+    
+    // Test función elementos
+    function testElementos() {
+      console.log('Probando función de elementos...');
+      console.log('Verificando si existe abrirModalCrear:', typeof abrirModalCrear);
+      
+      if (typeof abrirModalCrear === 'function') {
+        console.log('Función abrirModalCrear existe, ejecutando...');
+        abrirModalCrear();
+      } else {
+        console.error('Función abrirModalCrear NO existe');
+        alert('Error: La función abrirModalCrear no está definida. Verifica que elementos.js se haya cargado.');
+      }
+    }
+    
+    console.log('Test page loaded');
+    console.log('Bootstrap version:', bootstrap.Modal ? 'Loaded' : 'NOT loaded');
+  </script>
+  
+  <!-- Cargar scripts de personas y elementos para probar -->
+  <script src="src/assets/js/personas.js"></script>
+  <script src="src/assets/js/elementos.js"></script>
+</body>
+</html>
