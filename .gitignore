@@ -1,3 +1,6 @@
+# Ignorar todo por defecto
+*
+
 # Dependencies
 node_modules/
 package-lock.json
