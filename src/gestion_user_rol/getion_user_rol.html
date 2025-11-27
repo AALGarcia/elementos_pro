@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/gestion_user_rol.css">
+    <title>Gestión de Usuarios y Roles</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Gestión de Usuarios y Roles</h1>
+            <p>Asigna y administra los roles de tus usuarios</p>
+        </div>
+        <div class="content">
+            <!-- Panel Izquierdo: Búsqueda y Selección de Usuarios -->
+            <div class="panel">
+                <h2>👥 Seleccionar Usuarios</h2>
+                
+                <div class="search-group">
+                    <label for="searchDoc">🔍 Buscar por Documento</label>
+                    <input type="text" id="searchDoc" placeholder="Ej: 12345678">
+                </div>
+                
+                <div class="search-group">
+                    <label for="searchName">🔎 Buscar por Nombre</label>
+                    <input type="text" id="searchName" placeholder="Ej: Juan García">
+                </div>
+                
+                <div class="users-list" id="usersList">
+                    <div class="empty-state">Realiza una búsqueda para ver usuarios</div>
+                </div>
+            </div>
+            
+            <!-- Panel Derecho: Asignación de Roles -->
+            <div class="panel">
+                <h2>🔐 Asignar Roles</h2>
+                
+                <div class="selected-info">
+                    <strong>Usuario Seleccionado:</strong>
+                    <div id="selectedUserInfo">Ninguno</div>
+                </div>
+                
+                <div class="roles-list" id="rolesList">
+                    <div class="empty-state">Selecciona un usuario primero</div>
+                </div>
+                
+                <div class="actions">
+                    <button class="btn btn-primary" id="saveBtn">💾 Guardar</button>
+                    <button class="btn btn-secondary" id="cancelBtn">❌ Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/gestion_user_rol.js"></script>
+</body>
+</html>
